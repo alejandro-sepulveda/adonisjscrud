@@ -46,7 +46,7 @@ class TaskController {
 
 async eliminar({params, response }) {
     const post = await Task.find(params.id)
-    post.delete();
+    await post.delete();
     return response.status(200).json(post);
 
 }
